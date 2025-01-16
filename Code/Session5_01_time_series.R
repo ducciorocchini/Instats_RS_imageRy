@@ -26,7 +26,14 @@ difgr = gr[[1]] - gr[[4]]
 dev.off()
 plot(difgr)
 
-# Exercise: compose a RGB image with the years of Greenland temperature
-im.plotRGB(gr, r=1, g=2, b=4)
-# gr: 2000, 2005, 2010, 2015
+# ridgeline plots
+
+# NDVI file
+ndvi <- im.import("NDVI_2020")
+
+plot(ndvi)
+
+# Ridgeline plot
+names(ndvi) <- c("01 January","05 May","08 August","11 November")
+im.ridgeline(ndvi, 2, "viridis")
 
