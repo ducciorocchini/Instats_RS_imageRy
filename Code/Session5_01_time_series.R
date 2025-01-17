@@ -34,6 +34,6 @@ ndvi <- im.import("NDVI_2020")
 plot(ndvi)
 
 # Ridgeline plot
-names(ndvi) <- c("01 January","05 May","08 August","11 November")
+names(ndvi) <- c("02 February","05 May","08 August","11 November")
 im.ridgeline(ndvi, 2, "viridis")
 
